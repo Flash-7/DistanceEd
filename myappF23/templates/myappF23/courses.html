@@ -1,0 +1,15 @@
+{% extends 'myappF23/base.html' %}
+
+{% block myhdg %}
+    Courses
+{% endblock %}
+
+{% block body_block %}
+  <h2>Available Courses</h2>
+  <ul>
+    {% for course in courselist %}
+      <li><a href="{% url 'myappF23:coursedetail' course.id %}">{{ course.title }} - {{ course.description }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'myappF23:place_order' %}">Place a New Order</a>
+{% endblock %}

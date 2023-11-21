@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Instructor Courses</title>
+</head>
+<body>
+    <h2>{{ instructor.first_name }} {{ instructor.last_name }}</h2>
+
+    <h3>Courses Taught and Their Students:</h3>
+    {% for course, students in students_by_course.items %}
+        <h4>{{ course.title }}</h4>
+        <ul>
+            {% for student in students %}
+                <li>{{ student.first_name }} {{ student.last_name }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</body>
+</html>

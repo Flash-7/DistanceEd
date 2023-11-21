@@ -1,0 +1,23 @@
+{% extends 'myappF23/base.html' %}
+
+{% block title %}
+    Details
+{% endblock %}
+
+{% block myhdg %}
+    Details
+{% endblock %}
+
+{% block body_block %}
+    <h2>Category: {{ category.name }}</h2>
+
+    <h3>List of Courses:</h3>
+    <ul>
+        {% for course in course_list %}
+            <li>{{ course.title }}<br>
+            Description: {{course.description}}<br>
+            Price: ${{course.price}}<br>
+            Level: {{course.level}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

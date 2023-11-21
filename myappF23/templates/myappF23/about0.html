@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>About - E-Learning WebApp!</title>
+</head>
+<body>
+    <h2>About Distance-Ed Web App</h2>
+    <p>This is a Distance Education Website! Search our Categories to find all available Courses.</p>
+
+    <!-- Hardcoded link to the main page -->
+    <p><a href="/myappF23/">Go back to main page (hardcoded URL)</a></p>
+
+    <!-- Link using URL namespacing -->
+    <p><a href="{% url 'myappF23:index' %}">Go back to main page (namespacing URL)</a></p>
+</body>
+</html>

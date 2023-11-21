@@ -1,0 +1,30 @@
+{% extends 'myappF23/base.html' %}
+
+{% block myhdg %}
+    Dashboard
+{% endblock %}
+
+{% block body_block %}
+
+{% if student %}
+    <h2>Welcome, {{ student.first_name }} {{ student.last_name }}</h2>
+
+    <h3>Courses Ordered:</h3>
+    <ul>
+        {% for order in orders %}
+            <li>{{ order.courses.title }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Courses Interested In:</h3>
+    <ul>
+        {% for course in interested_courses %}
+            <li>{{ course.title }}</li>
+        {% endfor %}
+    </ul>
+
+{% else %}
+    <p>You are not a registered student!</p>
+{% endif %}
+
+{% endblock %}

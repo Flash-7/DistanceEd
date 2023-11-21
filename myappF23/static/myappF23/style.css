@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.user{
+    background-color: lightblue;
+    color: blue;
+    font-size: 30px;
+    text-align:center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", ui-system, sans-serif;
+    padding:10px;
+    position: relative;
+}
+h1{
+    background-color: white;
+    color: black;
+    font-size: larger;
+}
+.hbar1 {
+    display: inline;
+    margin: 15px;
+}
+.footer {
+    background-color: lightblue;
+    padding: 10px;
+    text-align: center;
+}
+.footer a {
+    text-decoration: none; /* Remove hyperlink underlines */
+    color: black; /* Text color for the footer links */
+}
+.page-content {
+    min-height: 70vh;
+}
+ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    padding: 0; /* Remove default padding from the list */
+}
+
+ul li a {
+    text-decoration: none; /* Remove underline from links */
+}
+.category-list{
+    margin-left: 20px;
+}

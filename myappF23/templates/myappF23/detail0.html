@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Category Details - E-Learning WebApp!</title>
+</head>
+<body>
+    <h2>Category: {{ category.name }}</h2>
+
+    <h3>List of Courses:</h3>
+    <ul>
+        {% for course in course_list %}
+            <li>{{ course.title }}<br>
+            Description: {{course.description}}<br>
+            Price: ${{course.price}}<br>
+            f"Level: {{course.level}}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Link to the main page using URL namespacing -->
+    <p><a href="{% url 'myappF23:index' %}">Go back to main page (namespacing URL)</a></p>
+    <p><a href="{% url 'myappF23:about' %}">About page (namespacing URL)</a></p>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'myappF23/base.html' %}
+
+{% block myhdg %}
+    Course Details
+{% endblock %}
+
+{% block body_block %}
+  <h2>{{ course.title }} Details</h2>
+  <p>Number of People Interested: {{ course.interested }}</p>
+  <p>Price: {{ course.price }}</p>
+  <form method="post" action="{% url 'myappF23:coursedetail' course.id %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Indicate Interest</button>
+  </form>
+  <a href="{% url 'myappF23:courses' %}">Back to Courses</a>
+{% endblock %}
