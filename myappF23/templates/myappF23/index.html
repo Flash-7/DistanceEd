@@ -5,6 +5,14 @@
 {% endblock %}
 
 {% block body_block %}
+    <p>This page has been visited {{ user_visits }} times.</p>
+
+    {% if last_login_info %}
+    <p>Your last login was on: {{ last_login_info }}</p>
+    {% else %}
+    <p>Your last login was more than 5 minutes ago.</p>
+    {% endif %}
+
     {% if category_list %}
     <h2>List of Categories</h2>
     <ol>
